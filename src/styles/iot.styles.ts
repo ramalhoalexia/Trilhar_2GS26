@@ -1,0 +1,86 @@
+import { StyleSheet } from 'react-native';
+import type { Theme } from './theme';
+
+export const iotStyles = (t: Theme) =>
+  StyleSheet.create({
+    list: { paddingHorizontal: t.spacing.lg, paddingBottom: 120 },
+    topRow: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      marginTop: t.spacing.sm,
+      marginBottom: t.spacing.md,
+    },
+    pauseBtn: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      gap: 6,
+      minHeight: 40,
+      paddingHorizontal: 14,
+      borderRadius: t.radius.pill,
+      backgroundColor: t.colors.surface,
+      borderWidth: t.borderWidth,
+      borderColor: t.colors.border,
+    },
+    pauseText: { fontSize: t.fs(13), fontWeight: '700', color: t.colors.text },
+    alertBar: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      gap: t.spacing.md,
+      padding: t.spacing.md,
+      borderRadius: t.radius.lg,
+      backgroundColor: t.tones.danger.bg,
+      marginBottom: t.spacing.md,
+      borderWidth: t.highContrast ? 1.5 : 0,
+      borderColor: t.colors.border,
+    },
+    alertBarText: { flex: 1, color: t.tones.danger.fg, fontWeight: '800', fontSize: t.fs(14) },
+    intro: { fontSize: t.fs(13), color: t.colors.textMuted, lineHeight: t.fs(19), marginBottom: t.spacing.md },
+
+    // detalhe
+    hero: {
+      borderRadius: t.radius.xl,
+      padding: t.spacing.xl,
+      marginBottom: t.spacing.lg,
+      borderWidth: t.highContrast ? 1.5 : 0,
+      borderColor: t.colors.border,
+    },
+    heroName: { fontSize: t.fs(22), fontWeight: '900', color: '#FFFFFF', letterSpacing: -0.3 },
+    heroPlace: { fontSize: t.fs(13), color: '#FFFFFF', opacity: 0.9, marginTop: 4, fontWeight: '600' },
+    heroBadgeRow: { marginTop: t.spacing.md, flexDirection: 'row', gap: 8 },
+    sensor: {
+      backgroundColor: t.colors.surface,
+      borderRadius: t.radius.lg,
+      padding: t.spacing.lg,
+      marginBottom: t.spacing.md,
+      borderWidth: t.highContrast ? 1.5 : 0,
+      borderColor: t.colors.border,
+      ...t.shadow,
+    },
+    sensorTop: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
+    sensorTitle: { flexDirection: 'row', alignItems: 'center', gap: 8 },
+    sensorName: { fontSize: t.fs(14), fontWeight: '800', color: t.colors.text },
+    sensorValue: { fontSize: t.fs(32), fontWeight: '900', color: t.colors.text, marginTop: 6, letterSpacing: -1 },
+    sensorUnit: { fontSize: t.fs(14), fontWeight: '700', color: t.colors.textMuted },
+    sensorHint: { fontSize: t.fs(12), color: t.colors.textMuted, marginTop: 4, marginBottom: t.spacing.md, fontWeight: '600' },
+    actions: { gap: t.spacing.md, marginTop: t.spacing.sm },
+    demoNote: { fontSize: t.fs(12), color: t.colors.textMuted, textAlign: 'center', marginTop: 4 },
+
+    // alertas
+    alertCard: { flexDirection: 'row', gap: t.spacing.md },
+    alertIcon: {
+      width: 44,
+      height: 44,
+      borderRadius: 15,
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    alertInfo: { flex: 1 },
+    alertTitle: { fontSize: t.fs(15), fontWeight: '800', color: t.colors.text },
+    alertHub: { fontSize: t.fs(13), color: t.colors.textMuted, marginTop: 1, fontWeight: '600' },
+    alertDetail: { fontSize: t.fs(14), color: t.colors.text, marginTop: 6 },
+    alertMeta: { flexDirection: 'row', alignItems: 'center', gap: 8, marginTop: t.spacing.sm, flexWrap: 'wrap' },
+    alertTime: { fontSize: t.fs(12), color: t.colors.textMuted },
+    alertBtn: { marginTop: t.spacing.md },
+    chips: { flexDirection: 'row', marginBottom: t.spacing.md },
+  });
